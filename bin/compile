@@ -67,7 +67,7 @@ if [ ! -d "$build/.jdk7" ]; then
 fi
 cd ..
 
-export JAVA_HOME="$build/.jdk7"
+JAVA_HOME=$build/.jdk7 export JAVA_HOME
 
 if test -f $build/Godeps
 then
