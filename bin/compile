@@ -55,20 +55,6 @@ virtualenv() {
     python "$buildpack/vendor/virtualenv-1.11.6/virtualenv.py" "$@"
 }
 
-# Java
-OPENJDK7_URL="https://s3.amazonaws.com/heroku-jvm-langpack-java/openjdk7-u2-heroku-temaki.tar.gz"
-
-if [ ! -d "$build/.jdk7" ]; then
-  echo -n "-----> Installing OpenJDK7u2 build (to .jdk7)....."
-  mkdir "$build/.jdk7"
-  cd "$build/.jdk7"
-  curl --silent --max-time 180 --location $OPENJDK7_URL | tar xz
-  echo " done"
-fi
-cd ..
-
-JAVA_HOME=$build/.jdk7 export JAVA_HOME
-
 if test -f $build/Godeps
 then
     name=$(<$build/Godeps jq -r .ImportPath)
