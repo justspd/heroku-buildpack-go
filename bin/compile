@@ -70,7 +70,7 @@ if [ ! -d "$build/.jdk7" ]; then
   echo " done"
 fi
 cd ..
-MYJAVA_HOME=$build/.jdk7 export MYJAVA_HOME
+export MYJAVA_HOME=$build/.jdk7
 
 virtualenv() {
     python "$buildpack/vendor/virtualenv-1.11.6/virtualenv.py" "$@"
