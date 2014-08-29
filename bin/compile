@@ -180,7 +180,7 @@ else
     echo "-----> Running: go get ${FLAGS[@]} ./..."
     go get "${FLAGS[@]}" ./...
 fi
-godep go build "$p/workers/worker.go"
+
 rm -rf $build/.heroku
 
 mkdir -p $build/.profile.d
