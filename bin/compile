@@ -70,7 +70,6 @@ if [ ! -d "$build/.jdk7" ]; then
   echo " done"
 fi
 cd ..
-export MYJAVA_HOME=$build/.jdk7
 
 virtualenv() {
     python "$buildpack/vendor/virtualenv-1.11.6/virtualenv.py" "$@"
@@ -186,5 +185,5 @@ rm -rf $build/.heroku
 
 mkdir -p $build/.profile.d
 echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
-echo 'MYJAVAHOME="$build/.jdk7"; export MYJAVAHOME' > $build/.profile.d/java.sh
+# echo 'MYJAVAHOME="$build/.jdk7"; export MYJAVAHOME' > $build/.profile.d/java.sh
 
