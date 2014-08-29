@@ -186,5 +186,5 @@ rm -rf $build/.heroku
 
 mkdir -p $build/.profile.d
 echo 'PATH=$PATH:$HOME/bin:$build/.jdk7' > $build/.profile.d/go.sh
-echo 'MYJAVA_HOME=$build/.jdk7' > $build/.profile.d/java.sh
+echo 'MYJAVAHOME=$build/.jdk7; export MYJAVAHOME' > $build/.profile.d/java.sh
 
