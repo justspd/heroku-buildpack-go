@@ -187,5 +187,6 @@ mkdir -p $build/.profile.d
 echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
 # echo 'MYJAVAHOME="$build/.jdk7"; export MYJAVAHOME' > $build/.profile.d/java.sh
 
-"$build/app/appdown.me" compile
+ls
+"$p/appdown.me" compile
 
